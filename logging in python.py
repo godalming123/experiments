@@ -1,7 +1,9 @@
-from logging import *
+import logging
+
 LoggerFormat = "%(Levelname)s %(asctime)s - %(message)s"
-basicConfig (filename = "logger.log", level=DEBUG, format = LoggerFormat)
-logger = getLogger ()
+logging.basicConfig (filename = "logger.log", level="DEBUG")
+
+logger = logging.getLogger ()
 
 logger.debug ("debug")
 logger.info ("info")
