@@ -1,9 +1,9 @@
 from datetime import *
 while True :
     running = True
-    sec = input ("how long do you want the timer running for in seconds: ")
-    minutes = input ("how many minutes do you want the timer to run for: ")
-    hours = input ("how many hours do you wnt the timer to run for : ")
+    sec = input ("seconds: ")
+    minutes = input ("minutes: ")
+    hours = input ("hours: ")
     date = date ()
     try :
         sec = int (sec)
