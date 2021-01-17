@@ -1,30 +1,34 @@
 from time import *
-while True :
-	running = True
-	sec = input ("seconds: ")
-	minutes = input ("minutes: ")
-	hours = input ("hours: ")
 
-	try :
-		sec = int (sec)
-		minutes	= int (minutes)
-		hours = int (hours)
-	except :
-		print (hours, ", ", sec, "or", minutes, " is not a valid number")
-		running = False
+def getInt (prompt) :
+	num = input(prompt)
+	try:
+		return int(num)
+	except:
+		print(num, "is not a valid integer \n")
+		return getInt(prompt)
+
+while True :
+	secs = getInt ("seconds: ")
+	mins = getInt ("minutes: ")
+	hours = getInt ("hours: ")
+	
 		
-	while running :
-		print (hours, ":", minutes, ":", sec)
+	while True :
+		print (hours, ":", mins, ":", secs)
 		sleep (1)
 
-		if sec > 0 :
-			sec -= 1
+		if secs > 0 :
+			secs -= 1
 
-		elif minutes > 0:
-			minutes -= 1
-			sec = 59
+		elif mins > 0:
+			mins -= 1
+			secs = 59
 			
 		elif hours > 0:
 			hours -= 1
-			minutes = 59
-			sec = 59
+			mins = 59
+			secs = 59
+
+		else :
+			break
