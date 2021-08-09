@@ -1,12 +1,11 @@
 from time import *
 
-def getInt (prompt) :
-	num = input(prompt)
-	try:
-		return int(num)
-	except:
-		print(num, "is not a valid integer \n")
-		return getInt(prompt)
+def getInt (question):
+    while True:
+        try:
+            return int(input (question))
+        except:
+            print("please enter a real number!")
 
 while True :
 	secs = getInt ("seconds: ")
