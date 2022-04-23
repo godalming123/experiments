@@ -38,4 +38,5 @@ while True :
 
 		else :
 			print("timer finished!")
+			print("")
 			break
