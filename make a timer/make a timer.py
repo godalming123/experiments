@@ -15,7 +15,7 @@ while True :
 	days = getInt ("days: ")
 		
 	while True :
-		print ("DAY: ", days, "TIME: ", hours, ":", mins, ":", secs)
+		print ("DAY:", days, "TIME:", hours, ":", mins, ":", secs)
 		sleep (1)
 
 		if secs > 0 :
